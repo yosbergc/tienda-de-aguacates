@@ -10,11 +10,11 @@ async function obtenerDatos() {
 }
 function agregarDatos(datos) {
     let array = datos.map(articulo => {
-        return `<div class="single-product flex gap-2 items-center hover:bg-gray-900 p-2 hover:text-white transition ease-in-out delay-150 rounded-md cursor-pointer text-left items-center w-fit">
-        <img src="https://platzi-avo.vercel.app${articulo.image}" class="w-1/4 rounded-md">
+        return `<div class="single-product">
+        <img src="https://platzi-avo.vercel.app${articulo.image}" class="single-product-img">
         <div class="product-info">
-        <h3 class="text-xl font-bold">${articulo.name}</h3>
-        <p class="text-xl font-normal">$${articulo.price}</p>
+        <h3 class="single-product-name">${articulo.name}</h3>
+        <p class="single-product-price">$${articulo.price}</p>
         </div>
         </div>`
     })
